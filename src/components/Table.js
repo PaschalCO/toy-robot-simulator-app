@@ -1,6 +1,4 @@
 import React from "react";
-import "./Table.css";
-
 const Table = ({ robot }) => {
   const grid = Array.from({ length: 5 }, (_, row) => Array.from({ length: 5 }, (_, col) => ({ x: col, y: 4 - row })));
 
