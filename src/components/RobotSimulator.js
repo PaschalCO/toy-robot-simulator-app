@@ -72,9 +72,9 @@ const RobotSimulator = () => {
   };
 
   return (
-    <div className="robot-simulator">
+    <div className="robot-simulator" role="main">
       <h1>Toy Robot Simulator</h1>
-      <div className="simulator-container">
+      <div className="simulator-container" role="container" aria-label="Simulator">
         <Table robot={robot} />
 
         <Controls
@@ -83,8 +83,8 @@ const RobotSimulator = () => {
           handleRun={handleRun}
         />
       </div>
-      {output && <p className="output">Output: {output}</p>}
-      {error && <p className="error">{error}</p>}
+      {output && <p className="output" role="output">Output: {output}</p>}
+      {error && <p className="error" role="error">Error: {error}</p>}
     </div>
   );
 };
